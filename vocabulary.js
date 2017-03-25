@@ -133,20 +133,4 @@ class Vocabulary {
   }
 }
 
-
-/* example */
-const fs = require("fs");
-
-let words = fs.readFileSync("./g.txt", "utf-8").split("\n");
-
-let a = new Vocabulary();
-Promise.all(words.slice(0, 1).map(w => a.fullCrawl(w))).then(wordDefs => {
-  console.log(JSON.stringify(wordDefs, null, 2));
-}).catch(reason => { 
-  console.log(reason)
-});
-
-// a.sentence("test").then(r => console.log(r));
-// a.example("people").then(r => console.log(r));
-// a.grabText("scarletletter.txt").then(res => a.grab(res)).then(res => console.log(res));
-// a.grab("The grass-plot before the jail, in Prison Lane, on a certain summer morning, not less than two centuries ago, was occupied by a pretty large number of the inhabitants of Boston, all with their eyes intently fastened on the iron-clamped oaken door. Amongst any other population, or at a later period in the history of New England, the grim rigidity that petrified the bearded physiognomies of these good people would have augured some awful business in hand. It could have betokened nothing short of the anticipated execution of some noted culprit, on whom the sentence of a legal tribunal had but confirmed the verdict of public sentiment. But, in that early severity of the Puritan character, an inference of this kind could not so indubitably be drawn. It might be that a sluggish bond-servant, or an undutiful child, whom his parents had given over to the civil authority, was to be corrected at the whipping-post. It might be that an Antinomian, a Quaker, or other heterodox religionist, was to be scourged out of the town, or an idle or vagrant Indian, whom the white man's firewater had made riotous about the streets, was to be driven with stripes into the shadow of the forest. It might be, too, that a witch, like old Mistress Hibbins, the bitter-tempered widow of the magistrate, was to die upon the gallows. In either case, there was very much the same solemnity of demeanour on the part of the spectators, as befitted a people among whom religion and law were almost identical, and in whose character both were so thoroughly interfused, that the mildest and severest acts of public discipline were alike made venerable and awful. Meagre, indeed, and cold, was the sympathy that a transgressor might look for, from such bystanders, at the scaffold. On the other hand, a penalty which, in our days, would infer a degree of mocking infamy and ridicule, might then be invested with almost as stern a dignity as the punishment of death itself. hello world!!! I love you xiaobai!!").then(res => console.log(res));
+module.exports = Vocabulary
