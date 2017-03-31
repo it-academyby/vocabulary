@@ -60,11 +60,14 @@ class Vocabulary {
             wordDef.primary.push({pos, def: def[i]});
           });
         });
-        wordDef.definition = $("h3.definition").map((i, el) => {
+
+        wordDef.definition = {};
+        $("h3.definition").each((i, el) => {
           let pos = $(el).find("a").attr("title");
           let def = $(el).contents().last().text().replace(/\s+/g, " ");
-          return {pos, def};
-        }).get();
+          wordDef.definition[pos] = wordDef.definition[pos] || [];
+          wordDef.definition[pos].push(def.trim());
+        });
         return wordDef;
       });
   }
