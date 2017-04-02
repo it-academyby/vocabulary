@@ -3,5 +3,23 @@
     "cheerio": "^0.22.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.0"
-  }
+  },
+  "name": "vocabulary",
+  "version": "1.0.0",
+  "main": "vocabulary.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taoalpha/vocabulary.git"
+  },
+  "author": "TaoAlpha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taoalpha/vocabulary/issues"
+  },
+  "homepage": "https://github.com/taoalpha/vocabulary#readme",
+  "description": ""
 }
